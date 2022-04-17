@@ -2,49 +2,108 @@ html,
 body{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    /* margin: 0; */
+    margin: 0;
+    padding: 0;
 }
 
+.header-banner-container    {
+    margin: 0;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.709), 
+      rgba(14, 7, 7, 0.907)
+    ),
+    url(/resources/images/pexels-gradienta-6985048.jpg);
+    background-size: cover;
+    background-color: black;
+    padding: 15vh 10vw 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+.header-banner-container > h1   {
+    font-size: 43px;
+    color: white;
+    margin: 0;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .1rem;
+}
 
+.header-banner-container > h4   {
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1;
+}
 
-.search-icon    {
+form    {
+    width: 80%;
+    padding: 0 10%;
+    position: absolute;
+    z-index: 1;
+    margin-top: -1.5rem;
+}
+
+form .form-div .search-icon    {
     position: absolute;
     z-index: 2;
-    padding: 0.7rem 0.5rem 0.7rem 0.7rem;
+    padding: 1rem 0.5rem 1rem 0.7rem;
+    color: grey;
 }
 
-.search-input   {
-    padding: 0.5rem 2rem;
-    height: 2.5rem;
+form .form-div .search-input   {
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    height: 3rem;
     border-radius: 10px 0 0 10px;
     border: solid 1px #D1D5DB;
+    border-right: none;
     margin: 0;
     width: 80%;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-.search-input:active,
-.search-input:hover {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.141) !important;
-}
-
-.form-div:hover > .search-btn {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.141) !important;
-}
-
-.search-btn {
+form .form-div .search-btn {
     border-radius: 0 10px 10px 0;
-    height: 2.5rem;
+    height: 3rem;
     border: solid 1px #D1D5DB;
     width: 20%;
     position: absolute;
     z-index: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
 }
+
+.search-input:active,
+.search-input:focus,
+.search-input:hover,
+.form-div:hover > .search-btn {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.141);
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .star-checked {
     color: orange;
 }
 
-.movie-meta-data    {
+.result-container    {
     border-bottom: solid 1.5px #E5E7EB;
 }
