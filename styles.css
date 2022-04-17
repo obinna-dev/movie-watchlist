@@ -91,7 +91,6 @@ form    {
     margin-bottom: 4rem;
 }
 
-
 .result-container   {
     width: 80%;
     margin: 0 10%;
@@ -124,17 +123,13 @@ form    {
     }
 }
 
-
-
-.movie-info-container .title-and-rating-container   {
+.title-and-rating-container   {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin: 0;
-    padding: 0;
 }
 
-.title-and-rating-container .movie-title {
+.movie-title {
     font-size: 1.125rem;
     font-weight: 500;
 }
@@ -146,7 +141,6 @@ form    {
 h5 {
     font-size: 0.9rem;
     font-weight: 400;
-    padding: 0;
     margin: 0;
 }
 
@@ -154,8 +148,6 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 0;
-    padding: 0;
     align-items: center;
 }
 
@@ -172,7 +164,6 @@ h5 {
         max-width: 100%;
     }
 }
-
 
 .fa-plus-circle {
     font-size: 1.2rem;
