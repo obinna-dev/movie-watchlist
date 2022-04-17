@@ -41,21 +41,21 @@ body{
 }
 
 form    {
-    width: 80%;
+    width: 75%;
     padding: 0 10%;
     position: absolute;
     z-index: 1;
     margin-top: -1.5rem;
 }
 
-form .form-div .search-icon    {
+.search-icon    {
     position: absolute;
     z-index: 2;
     padding: 1rem 0.5rem 1rem 0.7rem;
     color: grey;
 }
 
-form .form-div .search-input   {
+.search-input   {
     padding: 0.5rem 1rem 0.5rem 2.5rem;
     height: 3rem;
     border-radius: 10px 0 0 10px;
@@ -67,7 +67,7 @@ form .form-div .search-input   {
     font-weight: 500;
 }
 
-form .form-div .search-btn {
+.search-btn {
     border-radius: 0 10px 10px 0;
     height: 3rem;
     border: solid 1px #D1D5DB;
@@ -87,23 +87,93 @@ form .form-div .search-btn {
     outline: none;
 }
 
+.empty-div {
+    margin-bottom: 4rem;
+}
+
+
+.result-container   {
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 1.5px #E5E7EB;
+
+}
+
+.movie-poster-container   {
+    flex: 1;
+}
+
+.movie-info-container {
+    flex: 6;
+}
+
+.movie-poster {
+    max-width: 100%;
+}
+
+@media (max-width: 680px){
+    .result-container   {
+        display: block;
+    }
+    .movie-poster {
+        width: 100%;
+    }
+}
 
 
 
+.movie-info-container .title-and-rating-container   {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
 
-
-
-
-
-
-
-
-
+.title-and-rating-container .movie-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
 
 .star-checked {
     color: orange;
 }
 
-.result-container    {
-    border-bottom: solid 1.5px #E5E7EB;
+h5 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.movie-meta-data  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.movie-summary    {
+    max-width: 50%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    color: #6B7280;
+}
+
+@media (max-width: 680px){
+    .movie-summary    {
+        max-width: 100%;
+    }
+}
+
+
+.fa-plus-circle {
+    font-size: 1.2rem;
 }

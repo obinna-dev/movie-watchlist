@@ -12,9 +12,9 @@
     <title>Movie Watchlist</title>
 </head>
 <body>
-    <div class="header-banner-container"> <!-- declare flex -->
-        <h1>Find your film</h1> <!-- flex item -->
-        <h4>My Watchlist</h4> <!-- flex item -->
+    <div class="header-banner-container">
+        <h1>Find your film</h1>
+        <h4>My Watchlist</h4>
     </div>
     <form action="">
         <div class="form-div">
@@ -23,18 +23,19 @@
             <button type="submit" class="search-btn">Search</button>
         </div>
     </form>
-    <div class="result-container"> <!-- declare flex -->
-        <div class="movie-poster-container"><img src="/resources/images/placeholder poster.jpeg" alt=""></div> <!-- flex item -->
+    <div class="empty-div"></div>
+    <div class="result-container"> <!-- declare flex DONE -->
+        <div class="movie-poster-container"><img src="/resources/images/placeholder poster.jpeg" alt="" class="movie-poster"></div> <!-- flex item -->
         <div class="movie-info-container"> <!-- flex item -->
-            <div class="title-and-rating-container"> <!-- declare flex -->
+            <div class="title-and-rating-container"> <!-- declare flex DONE-->
                 <h3 class="movie-title">Bladerunner</h3> <!-- flex item -->
                 <p class="fa fa-star star-checked"></p> <!-- flex item -->
                 <h5 class="rating">8.1</h5> <!-- flex item -->
             </div>
-            <div class="movie-meta-data">
-                <h5>117 min</h5>
-                <h5>Action, Drama, Sci-fi</h5>
-                <h5><span class="fa fa-plus-circle" aria-hidden="add to watch-list"></span> Watchlist</h5>
+            <div class="movie-meta-data"> <!-- declare flex DONE -->
+                <h5>117 min</h5> <!-- flex item -->
+                <h5>Action, Drama, Sci-fi</h5> <!-- flex item -->
+                <h5><span class="fa fa-plus-circle" aria-hidden="add to watch-list"></span> Watchlist</h5> <!-- flex item -->
             </div>
             <p class="movie-summary">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</p>
         </div>
