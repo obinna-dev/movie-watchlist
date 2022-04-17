@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Movie Watchlist</title>
+</head>
+<body>
+    <div class="header-banner-container"> <!-- declare flex -->
+        <h1>Find your film</h1> <!-- flex item -->
+        <h4>My Watchlist</h4> <!-- flex item -->
+    </div>
+    <form action="">
+        <div class="form-div">
+            <span class="fa fa-search search-icon"></span>
+            <input type="search" name="" class="search-input" placeholder="Bladerunner">
+            <button type="submit" class="search-btn">Search</button>
+        </div>
+    </form>
+    <div class="result-container"> <!-- declare flex -->
+        <div class="movie-poster-container"><img src="/resources/images/placeholder poster.jpeg" alt=""></div> <!-- flex item -->
+        <div class="movie-info-container"> <!-- flex item -->
+            <div class="title-and-rating-container"> <!-- declare flex -->
+                <h3 class="movie-title">Bladerunner</h3> <!-- flex item -->
+                <p class="fa fa-star star-checked"></p> <!-- flex item -->
+                <h5 class="rating">8.1</h5> <!-- flex item -->
+            </div>
+            <div class="movie-meta-data">
+                <h5>117 min</h5>
+                <h5>Action, Drama, Sci-fi</h5>
+                <h5><span class="fa fa-plus-circle" aria-hidden="add to watch-list"></span> Watchlist</h5>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
