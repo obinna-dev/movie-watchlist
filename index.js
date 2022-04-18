@@ -1,19 +1,22 @@
 let ratingIcon
 let userInput
+const apiKey = "b908409b"
 const goodRating = `<p class="fa fa-star star-checked"></p>`
 const badRating = `<p class="fa fa-star star-bad-rating"></p>`
 const resultsContainerHtml = document.getElementById("results-container")
 const searchForm = document.getElementById("search-form")
 
+
+
 searchForm.addEventListener("submit", (e)=>{
     e.preventDefault()
     resultsContainerHtml.innerHTML = ""
     userInput = document.getElementById("search-input").value
-    fetch(`http://www.omdbapi.com/?apikey=b908409b&s=${userInput}`)
+    fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${userInput}`)
     .then(res => res.json())
     .then(data => {
         data.Search.map(function(resultArrEl){
-            fetch(`http://www.omdbapi.com/?apikey=b908409b&t=${resultArrEl.Title}`)
+            fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${resultArrEl.Title}`)
                 .then(res => res.json())
                 .then(data => renderSearchResults(data))
         })
@@ -78,17 +81,6 @@ function addToWatchList(movieId) {
 //     "Director": ``,
 //     "Poster": ``
 // }
-
-// let myWatchListArr = [{"Title": "Harry Potter and the Deathly Hallows: Part 2",
-//                         "Rating": "2011",
-//                         "RatingIcon": "tt1201607",
-//                         "Runtime": "movie",
-//                         "Genre": "movie",
-//                         "Plot": "movie",
-//                         "Actors": "movie",
-//                         "Director": "movie",
-//                         "Poster": "https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg"
-//                         }]
 
 // myWatchListArr =    {"Title": `${movie.Title}`,
 // "RatingIcon": `${ratingIcon}`,

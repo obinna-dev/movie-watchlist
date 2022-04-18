@@ -13,40 +13,17 @@
 </head>
 <body>
     <div class="watchlist-header-banner-container">
-        <h1>Find your film</h1>
-        <h4>My Watchlist</h4>
+        <h1>My Watchlist</h1>
+        <h4><a href="index.html">Search for movies</a></h4>
     </div>
-    <form action="" id="search-form">
-        <div class="form-div">
-            <span class="fa fa-search search-icon"></span>
-            <input type="search" name="" class="search-input" placeholder="Search movies by title" id="search-input">
-            <button type="submit" class="search-btn">Search</button>
-        </div>
-    </form>
     <div class="empty-div"></div>
-    <div id="results-container">
-        <div class="result" id="result">
-            <div class="movie-poster-container"><img src="/resources/images/placeholder poster.jpeg" alt="" class="movie-poster"></div>
-            <div class="movie-info-container">
-                <div class="title-and-rating-container">
-                    <h3 class="movie-title">Bladerunner</h3>
-                    <p class="fa fa-star star-checked"></p>
-                    <h5 class="rating">8.1</h5>
-                </div>
-                <div class="movie-meta-data"> 
-                    <h5>117 min</h5>
-                    <h5>Action, Drama, Sci-fi</h5>
-                    <div class="watchlist-btn-container">
-                        <h5 class="watchlist-btn"><span class="fa fa-plus-circle" aria-hidden="add to watch-list"></span> Watchlist</h5>
-                    </div>
-                </div>
-                <p class="movie-summary">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</p>
-                <h5 class="actors">Actors: <em>Chris Pratt, Zoe Saldana, Dave Bautista</em></h5>
-                <h5 class="director">Director: <em>James Gunn</em></h5>
-            </div>
+    <div id="watchlist-container">
+        <div class="empty-watchlist-page">
+            <h3>Your watchlist is looking a little empty...</h3>
+            <h4><a href="index.html"><span class="fa fa-plus-circle"> </span>  Let's add some movies!</a></h4>
         </div>
     </div>
     
-    <script src="index.js"></script>
+    <script src="watchlist.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ body{
       rgba(0, 0, 0, 0.709), 
       rgba(14, 7, 7, 0.907)
     ),
-    url(/resources/images/pexels-gradienta-6985048.jpg);
+    url(/resources/images/tyson-moultrie-BQTHOGNHo08-unsplash.jpg);
     background-size: cover;
     background-color: black;
     padding: 15vh 10vw 15vh;
@@ -30,7 +30,7 @@ body{
       rgba(0, 0, 0, 0.709), 
       rgba(0, 0, 0, 0.907)
     ),
-    url(/resources/images/tyson-moultrie-BQTHOGNHo08-unsplash.jpg);
+    url(/resources/images/pexels-gradienta-6985048.jpg);
 }
 
 .watchlist-header-banner-container > h1,
@@ -43,13 +43,19 @@ body{
     letter-spacing: .1rem;
 }
 
-.watchlist-header-banner-container > h4,
-.index-header-banner-container > h4   {
+.watchlist-header-banner-container > h4 > a,
+.index-header-banner-container > h4 > a  {
     color: white;
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
     letter-spacing: 1;
+    text-decoration: none;
+}
+
+.watchlist-header-banner-container > h4 > a:hover,
+.index-header-banner-container > h4 > a:hover  {
+    color: rgb(231, 152, 152);
 }
 
 form    {
@@ -193,10 +199,46 @@ h5 {
     cursor: pointer;
 }
 
+.fa-minus-circle,
 .fa-plus-circle {
     font-size: 1.2rem;
 }
 
 .watchlist-btn:hover {
     color: red;
+}
+
+.empty-watchlist-page,
+.empty-search-page  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.fa-film    {
+    font-size: 100px;
+    margin: 1rem;
+    opacity: 20%;
+}
+
+.empty-watchlist-page > h3,
+.empty-search-page > h3{
+    opacity: 25%;
+    margin: 0;
+}
+
+.empty-watchlist-page > h4  {
+    cursor: pointer;
+}
+
+.empty-watchlist-page > h4 > a{
+    color: black;
+    text-decoration: none;
+}
+
+.empty-watchlist-page > h4 > a:hover  {
+    cursor: pointer;
+    color: rgb(203, 110, 110);
 }
