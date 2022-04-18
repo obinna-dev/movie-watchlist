@@ -6,7 +6,8 @@ body{
     padding: 0;
 }
 
-.header-banner-container    {
+.watchlist-header-banner-container,
+.index-header-banner-container    {
     margin: 0;
     background-image: 
     linear-gradient(
@@ -23,7 +24,17 @@ body{
     flex-wrap: wrap;
 }
 
-.header-banner-container > h1   {
+.watchlist-header-banner-container    {
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.709), 
+      rgba(0, 0, 0, 0.907)
+    ),
+    url(/resources/images/tyson-moultrie-BQTHOGNHo08-unsplash.jpg);
+}
+
+.watchlist-header-banner-container > h1,
+.index-header-banner-container > h1   {
     font-size: 43px;
     color: white;
     margin: 0;
@@ -32,7 +43,8 @@ body{
     letter-spacing: .1rem;
 }
 
-.header-banner-container > h4   {
+.watchlist-header-banner-container > h4,
+.index-header-banner-container > h4   {
     color: white;
     font-size: 14px;
     font-weight: 700;
@@ -77,6 +89,7 @@ form    {
     font-size: 14px;
     font-weight: 500;
     color: #374151;
+    cursor: pointer;
 }
 
 .search-input:active,
@@ -91,15 +104,15 @@ form    {
     margin-bottom: 4rem;
 }
 
-.result-container   {
+.result   {
     width: 80%;
     margin: 0 10%;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding-bottom: 1rem;
+    gap: 2rem;
+    padding: 2rem 0;
     border-bottom: solid 1.5px #E5E7EB;
-
 }
 
 .movie-poster-container   {
@@ -107,7 +120,7 @@ form    {
 }
 
 .movie-info-container {
-    flex: 6;
+    flex: 5;
 }
 
 .movie-poster {
@@ -115,7 +128,7 @@ form    {
 }
 
 @media (max-width: 680px){
-    .result-container   {
+    .result   {
         display: block;
     }
     .movie-poster {
@@ -138,6 +151,10 @@ form    {
     color: orange;
 }
 
+.star-bad-rating {
+    color: red;
+}
+
 h5 {
     font-size: 0.9rem;
     font-weight: 400;
@@ -152,7 +169,7 @@ h5 {
 }
 
 .movie-summary    {
-    max-width: 50%;
+    max-width: 55%;
     font-size: 1rem;
     font-weight: 400;
     line-height: 20px;
@@ -165,6 +182,21 @@ h5 {
     }
 }
 
+.actors,
+.director {
+    color: #6B7280;
+}
+
+.watchlist-btn-container    {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
 .fa-plus-circle {
     font-size: 1.2rem;
+}
+
+.watchlist-btn:hover {
+    color: red;
 }
