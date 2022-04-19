@@ -1,5 +1,4 @@
 let ratingIcon
-let userInput
 const apiKey = "b908409b"
 const goodRating = `<p class="fa fa-star star-checked"></p>`
 const badRating = `<p class="fa fa-star star-bad-rating"></p>`

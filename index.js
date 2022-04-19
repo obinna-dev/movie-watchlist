@@ -1,12 +1,9 @@
-let ratingIcon
-let userInput
+let ratingIcon, userInput
 const apiKey = "b908409b"
 const goodRating = `<p class="fa fa-star star-checked"></p>`
 const badRating = `<p class="fa fa-star star-bad-rating"></p>`
 const resultsContainerHtml = document.getElementById("results-container")
 const searchForm = document.getElementById("search-form")
-
-
 
 // light and dark theme setup
 document.getElementById("switch").onclick = () =>
@@ -19,7 +16,7 @@ searchForm.addEventListener("submit", (e)=>{
     fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${userInput}`)
     .then(res => res.json())
     .then(data => {
-        data.Search.map(function(resultArrEl){
+        data.Search.map((resultArrEl)=>{
             fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${resultArrEl.Title}`)
                 .then(res => res.json())
                 .then(data => renderSearchResults(data))
