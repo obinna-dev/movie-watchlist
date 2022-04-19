@@ -60,9 +60,11 @@ function addToWatchList(movieId) {
             if (!myWatchListArr.includes(movieId)) {
                 myWatchListArr.push(movieId)
                 window.localStorage.setItem("myWatchList", JSON.stringify(myWatchListArr))
+                document.querySelector(`.watchlist-btn`).remove()
             } else {alert(`Opps! This movie is already saved in your watchlist!`)}
     } else {
         myWatchListArr.push(movieId)
         window.localStorage.setItem("myWatchList", JSON.stringify(myWatchListArr))
+        document.querySelector(`.watchlist-btn`).remove()
     }
 }
