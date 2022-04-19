@@ -106,7 +106,7 @@ label:active:after {
       rgba(0, 0, 0, 0.709), 
       rgba(14, 7, 7, 0.907)
     ),
-    url(/resources/images/tyson-moultrie-BQTHOGNHo08-unsplash.jpg);
+    url(tyson-moultrie-BQTHOGNHo08-unsplash.jpg);
     background-size: cover;
     background-color: black;
     padding: 15vh 10vw 15vh;
@@ -122,7 +122,7 @@ label:active:after {
       rgba(0, 0, 0, 0.709), 
       rgba(0, 0, 0, 0.907)
     ),
-    url(/resources/images/pexels-gradienta-6985048.jpg);
+    url(pexels-gradienta-6985048.jpg);
 }
 
 .watchlist-header-banner-container > h1,
