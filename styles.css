@@ -1,11 +1,103 @@
+:root {
+    --bg-color: #fff;
+    --search-icon-color: #808080;
+    --search-input-color: #6B7280;
+    --search-input-bg-color: #fff;
+    --search-button-bg-color: #F9FAFB;
+    --search-btn-text-color: #374151;
+    --search-border-color: #D1D5DB;
+    --search-box-shadow-color: rgba(0, 0, 0, 0.141);
+    --result-container-seperator: #E5E7EB;
+    --h5-font-color: #111827;
+    --movie-title-font-color: #000000;
+    --movie-plot-summary-color: #6B7280;
+    --watchlist-btn-color-hover: #cb6e6e;
+    --empty-page-icon-color: #000000;
+    --empty-page-text-hover: #cb6e6e;
+}
+
+.light-theme  {
+    --bg-color: #121212;
+    --search-icon-color: #808080;
+    --search-input-color: #A5A5A5;
+    --search-input-bg-color: #2E2E2F;
+    --search-button-bg-color: #4B4B4B;
+    --search-btn-text-color: #ffffff;
+    --search-border-color: #4b4b4b00;
+    --search-box-shadow-color: rgba(0, 0, 0, 0.666);
+    --result-container-seperator: #2C2C2C;
+    --h5-font-color: #ffffff;
+    --movie-title-font-color: #ffffff;
+    --movie-plot-summary-color: #A5A5A5;
+    --watchlist-btn-color-hover: #cb6e6e;
+    --empty-page-icon-color: #8b8b8b;
+    --empty-page-text-hover: #cb6e6e;
+}
+
 html,
 body{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
 }
 
+.darkmode-switch-container   {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.darkmode-switch-container > p {
+    color: white;
+    font-size: small;
+    margin-left: 1rem;
+}
+
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+label {
+    display: block;
+    width: 2.5rem;
+    height: 1.3rem;
+    background-color: #477a85;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 20px #477a8550;
+}
+
+label::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: #e8f5f7;
+    position: absolute;
+    border-radius: 70px;
+    top: 2.49px;
+    left: 2.5px;
+    transition: 0.3s;
+}
+
+input:checked + label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+input:checked + label {
+    background-color: #243d42;
+    }
+
+label:active:after {
+     width: 2.7rem;
+    }
+  
 .watchlist-header-banner-container,
 .index-header-banner-container    {
     margin: 0;
@@ -70,39 +162,42 @@ form    {
     position: absolute;
     z-index: 2;
     padding: 1rem 0.5rem 1rem 0.7rem;
-    color: grey;
+    color: var(--search-icon-color);
 }
 
 .search-input   {
     padding: 0.5rem 1rem 0.5rem 2.5rem;
     height: 3rem;
     border-radius: 10px 0 0 10px;
-    border: solid 1px #D1D5DB;
+    border: solid 1px var(--search-border-color);
+    color: var(--search-input-color);
     border-right: none;
     margin: 0;
     width: 80%;
     font-size: 1rem;
     font-weight: 500;
+    background-color: var(--search-input-bg-color);
 }
 
 .search-btn {
     border-radius: 0 10px 10px 0;
     height: 3rem;
-    border: solid 1px #D1D5DB;
+    border: solid 1px var(--search-border-color);
     width: 20%;
     position: absolute;
     z-index: 1;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 500;
-    color: #374151;
+    color: var(--search-btn-text-color);
     cursor: pointer;
+    background-color: var(--search-button-bg-color);
 }
 
 .search-input:active,
 .search-input:focus,
 .search-input:hover,
 .form-div:hover > .search-btn {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.141);
+    box-shadow: 0 5px 5px var(--search-box-shadow-color);
     outline: none;
 }
 
@@ -118,7 +213,7 @@ form    {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem 0;
-    border-bottom: solid 1.5px #E5E7EB;
+    border-bottom: solid 1.5px var(--result-container-seperator);
 }
 
 .movie-poster-container   {
@@ -151,6 +246,7 @@ form    {
 .movie-title {
     font-size: 1.125rem;
     font-weight: 500;
+    color: var(--movie-title-font-color);
 }
 
 .star-checked {
@@ -165,6 +261,7 @@ h5 {
     font-size: 0.9rem;
     font-weight: 400;
     margin: 0;
+    color: var(--h5-font-color);
 }
 
 .movie-meta-data  {
@@ -179,7 +276,7 @@ h5 {
     font-size: 1rem;
     font-weight: 400;
     line-height: 20px;
-    color: #6B7280;
+    color: var(--movie-plot-summary-color);
 }
 
 @media (max-width: 680px){
@@ -190,7 +287,7 @@ h5 {
 
 .actors,
 .director {
-    color: #6B7280;
+    color: var(--movie-plot-summary-color);
 }
 
 .watchlist-btn-container    {
@@ -202,10 +299,11 @@ h5 {
 .fa-minus-circle,
 .fa-plus-circle {
     font-size: 1.2rem;
+    color: var(--movie-title-font-color)
 }
 
-.watchlist-btn:hover {
-    color: red;
+.watchlist-btn:hover > .fa-plus-circle{
+    color: var(--watchlist-btn-color-hover);
 }
 
 .empty-watchlist-page,
@@ -214,19 +312,21 @@ h5 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem 0;
+    padding: 3rem 0 7rem;
 }
 
 .fa-film    {
     font-size: 100px;
     margin: 1rem;
     opacity: 20%;
+    color: var(--empty-page-icon-color);
 }
 
 .empty-watchlist-page > h3,
 .empty-search-page > h3{
     opacity: 25%;
     margin: 0;
+    color: var(--empty-page-icon-color);
 }
 
 .empty-watchlist-page > h4  {
@@ -234,11 +334,11 @@ h5 {
 }
 
 .empty-watchlist-page > h4 > a{
-    color: black;
+    color: var(--empty-page-icon-color);
     text-decoration: none;
 }
 
 .empty-watchlist-page > h4 > a:hover  {
     cursor: pointer;
-    color: rgb(203, 110, 110);
+    color: var(--empty-page-text-hover);
 }

@@ -6,12 +6,16 @@ const badRating = `<p class="fa fa-star star-bad-rating"></p>`
 let watchListContainerHtml = document.getElementById("watchlist-container")
 const searchForm = document.getElementById("search-form")
 
+// light and dark theme setup
+document.getElementById("switch").onclick = () =>
+    document.body.classList.toggle("light-theme")
+
 let retrievedWatchListArr = JSON.parse(localStorage.getItem("myWatchList"))
 retrievedWatchListArr.map(function(movieIDs){
     fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${movieIDs}`)
         .then(res => res.json())
         .then(data => {
-            renderSavedMovieList(data)
+                renderSavedMovieList(data)               
         })
 })
 

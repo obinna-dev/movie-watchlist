@@ -8,6 +8,10 @@ const searchForm = document.getElementById("search-form")
 
 
 
+// light and dark theme setup
+document.getElementById("switch").onclick = () =>
+    document.body.classList.toggle("light-theme")
+
 searchForm.addEventListener("submit", (e)=>{
     e.preventDefault()
     resultsContainerHtml.innerHTML = ""
@@ -28,7 +32,6 @@ function renderSearchResults(movie)  {
     movie.imdbRating <= 5 ? ratingIcon = badRating
     : ratingIcon = goodRating
 
-    // Render search results 
     resultsContainerHtml.innerHTML += `
         <div class="result" id="result">
             <div class="movie-poster-container"><img src="${movie.Poster}" alt="${movie.Title} movie poster" class="movie-poster"></div>
@@ -54,41 +57,15 @@ function renderSearchResults(movie)  {
 }
 
 let myWatchListArr = []
-
 function addToWatchList(movieId) {
     if (localStorage.getItem("myWatchList")){
         myWatchListArr = JSON.parse(localStorage.getItem("myWatchList"))
             if (!myWatchListArr.includes(movieId)) {
                 myWatchListArr.push(movieId)
                 window.localStorage.setItem("myWatchList", JSON.stringify(myWatchListArr))
-                console.log(`Your movie ${movieId} has been saved!`)
-            } else {console.log(`Opps! Movie ${movieId} is already saved in your watchlist!`)}
+            } else {alert(`Opps! This movie is already saved in your watchlist!`)}
     } else {
         myWatchListArr.push(movieId)
         window.localStorage.setItem("myWatchList", JSON.stringify(myWatchListArr))
-        console.log(`New watchlist created and movie ${movieId} saved in it! Congrats!`)
     }
 }
-
-// let movieToSave = {
-//     "Title": ``,
-//     "RatingIcon": ``,
-//     "Rating": ``,
-//     "Runtime": ``,
-//     "Genre": ``,
-//     "Plot": ``,
-//     "Actors": ``,
-//     "Director": ``,
-//     "Poster": ``
-// }
-
-// myWatchListArr =    {"Title": `${movie.Title}`,
-// "RatingIcon": `${ratingIcon}`,
-// "Rating": `${movie.imdbRating}`,
-// "Runtime": `${movie.Runtime}`,
-// "Genre": `${movie.Genre}`,
-// "Plot": `${movie.Plot}`,
-// "Actors": `${movie.Actors}`,
-// "Director": `${movie.Director}`,
-// "Poster": `${movie.Poster}`
-// }
